@@ -1,19 +1,10 @@
 pipeline{
-    agent any
-    stages{
-        stage('Build stage'){
-            steps{
-                echo "this is build stage"
-            }
-        }
-        stage('Test stage'){
-            steps{
-                echo "this is test stage"
-            }
-        }
-        stage('Deploy stage'){
-            steps{
-                echo "this is deploy stage"
+    aganet any{
+        stages{
+            stage('Branch Test'){
+                steps{
+                    echo "The branch name is ${env.BRANCH_NAME}"
+                }
             }
         }
     }
